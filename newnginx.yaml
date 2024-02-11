@@ -20,6 +20,8 @@ spec:
       containers:
       - image: bitnami/nginx
         name: nginx
+      - image: bitnami/nginx
+        name: sidecar        
         resources: {}
 status: {}
 ---
