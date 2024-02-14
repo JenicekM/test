@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: newnginx
+  name: newnginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: newnginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: newnginx
+    spec:
+      containers:
+      - image: bitnami/nginx
+        name: nginx
+      - image: bitnami/nginx
+        name: sidecar        
+        resources: {}
+status: {}
